@@ -1,144 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
 
-    <!-- Icons -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Love Songs Player</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 <body>
 
-    <div class="music-player">
+<div class="container">
 
-        <!-- Heading -->
-        <h1>Music Player</h1>
+<div class="music-card">
 
-        <!-- Album Image -->
-        <div class="cover">
-            <img id="cover-image"
-                 src="images/cover1.jpg"
-                 alt="Album Cover">
-        </div>
+<div class="left">
 
-        <!-- Song Details -->
-        <div class="song-details">
+<div class="cover">
 
-            <h2 id="song-title">
-                Shape of You
-            </h2>
+<img
+id="cover-image"
+src="images/cover1.jpg"
+alt="Album Cover">
 
-            <p id="artist-name">
-                Ed Sheeran
-            </p>
+</div>
 
-        </div>
+<h2 id="song-title">
+Until I Found You
+</h2>
 
-        <!-- Audio -->
-        <audio id="audio">
+<p id="artist-name">
+Stephen Sanchez
+</p>
 
-            <source
-                src="songs/song1.mp3"
-                type="audio/mp3">
+<div class="time">
 
-        </audio>
+<span id="current-time">
 
-        <!-- Progress -->
+0:00
 
-        <div class="progress-container">
+</span>
 
-            <span id="current-time">
-                0:00
-            </span>
+<span id="duration">
 
-            <input
-                type="range"
-                id="progress-bar"
-                min="0"
-                max="100"
-                value="0">
+0:00
 
-            <span id="duration">
-                0:00
-            </span>
+</span>
 
-        </div>
+</div>
 
-        <!-- Controls -->
+<input
+type="range"
+id="progress-bar"
+value="0"
+min="0"
+max="100">
 
-        <div class="controls">
+<div class="controls">
 
-            <button id="prev">
+<button id="prev">
 
-                <i class="fa-solid fa-backward"></i>
+<i class="fa-solid fa-backward-step"></i>
 
-            </button>
+</button>
 
-            <button id="play">
+<button id="play">
 
-                <i class="fa-solid fa-play"></i>
+<i class="fa-solid fa-play"></i>
 
-            </button>
+</button>
 
-            <button id="pause">
+<button id="next">
 
-                <i class="fa-solid fa-pause"></i>
+<i class="fa-solid fa-forward-step"></i>
 
-            </button>
+</button>
 
-            <button id="next">
+</div>
 
-                <i class="fa-solid fa-forward"></i>
+<div class="volume">
 
-            </button>
+<i class="fa-solid fa-volume-low"></i>
 
-        </div>
+<input
+type="range"
+id="volume"
+min="0"
+max="1"
+step="0.01"
+value="1">
 
-        <!-- Volume -->
+<i class="fa-solid fa-volume-high"></i>
 
-        <div class="volume">
+</div>
 
-            <i class="fa-solid fa-volume-high"></i>
+</div>
 
-            <input
-                type="range"
-                id="volume"
-                min="0"
-                max="1"
-                step="0.01"
-                value="1">
+<div class="right">
 
-        </div>
+<h2>
 
-        <!-- Playlist -->
+<i class="fa-solid fa-heart"></i>
 
-        <div class="playlist">
+Love Playlist
 
-            <h3>Playlist</h3>
+</h2>
 
-            <ul id="playlist">
+<div
+class="playlist"
+id="playlist">
 
-                <li>Shape of You - Ed Sheeran</li>
+<div
+class="song active"
+data-index="0">
 
-                <li>Perfect - Ed Sheeran</li>
+<img src="images/cover1.jpg">
 
-                <li>Believer - Imagine Dragons</li>
+<div>
 
-            </ul>
+<h4>Until I Found You</h4>
 
-        </div>
+<p>Stephen Sanchez</p>
 
-    </div>
+</div>
 
-    <script src="script.js"></script>
+<span>2:58</span>
+
+</div>
+
+<div
+class="song"
+data-index="1">
+
+<img src="images/cover2.jpg">
+
+<div>
+
+<h4>Shape of You</h4>
+
+<p>Ed Sheeran</p>
+
+</div>
+
+<span>4:23</span>
+
+</div>
+
+<div
+class="song"
+data-index="2">
+
+<img src="images/cover3.jpg">
+
+<div>
+
+<h4>Dandelions</h4>
+
+<p>Ruth B.</p>
+
+</div>
+
+<span>3:54</span>
+
+</div>
+
+<div
+class="song"
+data-index="3">
+
+<img src="images/cover4.jpg">
+
+<div>
+
+<h4>Night Changes</h4>
+
+<p>One Direction</p>
+
+</div>
+
+<span>3:46</span>
+
+</div>
+
+<div
+class="song"
+data-index="4">
+
+<img src="images/cover5.jpg">
+
+<div>
+
+<h4>Lover</h4>
+
+<p>Taylor Swift</p>
+
+</div>
+
+<span>3:41</span>
+
+</div>
+
+<div
+class="song"
+data-index="5">
+
+<img src="images/cover6.jpg">
+
+<div>
+
+<h4>Golden Hour</h4>
+
+<p>JVKE</p>
+
+</div>
+
+<span>3:29</span>
+
+</div>
+
+<div
+class="song"
+data-index="6">
+
+<img src="images/cover7.jpg">
+
+<div>
+
+<h4>Cupid</h4>
+
+<p>Fifty Fifty</p>
+
+</div>
+
+<span>4:18</span>
+
+</div>
+
+<div
+class="song"
+data-index="7">
+
+<img src="images/cover8.jpg">
+
+<div>
+
+<h4>Rewrite The Stars</h4>
+
+<p>James Arthur</p>
+
+</div>
+
+<span>3:37</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<audio id="audio"></audio>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>
