@@ -15,8 +15,8 @@ cover:"images/cover2.jpg"
 },
 
 {
-title:"Dandelions",
-artist:"Ruth B.",
+title:"Beauty and a Beat",
+artist:"Justin Beiber",
 src:"songs/song3.mp3",
 cover:"images/cover3.jpg"
 },
@@ -29,32 +29,25 @@ cover:"images/cover4.jpg"
 },
 
 {
-title:"Lover",
+title:"Love Story",
 artist:"Taylor Swift",
 src:"songs/song5.mp3",
 cover:"images/cover5.jpg"
 },
 
 {
-title:"Golden Hour",
+title:"her(ft. ZVC)",
 artist:"JVKE",
 src:"songs/song6.mp3",
 cover:"images/cover6.jpg"
 },
 
 {
-title:"Photograph",
-artist:"Ed Sheeran",
+title:"Cupid",
+artist:"Fifty Fifty",
 src:"songs/song7.mp3",
 cover:"images/cover7.jpg"
 },
-
-{
-title:"Rewrite The Stars",
-artist:"James Arthur",
-src:"songs/song8.mp3",
-cover:"images/cover8.jpg"
-}
 
 ];
 
